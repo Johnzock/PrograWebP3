@@ -1,0 +1,81 @@
+body{
+    color: rgba(0, 62, 233, 0.637);
+    
+}
+#Titulo{
+    color: indigo;
+    font-weight: 600;
+    font-size: 80pt;
+}
+.Parrafo{
+    color: brown;
+}
+div{
+    background-color: rgb(240, 212, 240);
+    width: 400px;
+    margin: 0 auto;
+}
+nav li{
+    margin: 0;
+    position: relative;
+}
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: blueviolet;
+    width: 120px;
+    text-align: center;
+}
+nav ul{
+    background-color: rgb(240, 192, 202);
+    display: flex;
+
+}
+nav ul li{
+    list-style: none;
+
+}
+nav ul li a{
+    color: black;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+nav ul li a:hover{
+    background-color: rgb(0, 255, 221);
+}
+nav a:hover{
+    background-color: aqua;
+}
+.Submenu{
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+}
+.Mostrar-Submenu:hover .Submenu{
+    display: block;
+    text-align: center;
+}
+
+#box{
+    background-color: azure;
+    margin: 100px;
+    padding: 50px;
+    border: 1px solid chartreuse;
+    border-radius: 50px;
+}
+#box1{
+    background-color: rgb(236, 236, 166);
+    margin: 100px;
+    padding: 50px;
+    border: 1px solid chocolate;
+    border-radius: 50px;
+}
+a:hover{
+    background-color: rgb(236, 14, 14);
+    transition: background-color 0.5s ease, height 3s ease, width 3s ease;
+    width: 120px;
+}

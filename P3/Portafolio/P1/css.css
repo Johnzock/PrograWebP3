@@ -1,0 +1,48 @@
+body{
+    color: rgba(22, 155, 110, 0.637);
+    
+}
+#Titulo{
+    color: indigo;
+    font-weight: 600;
+    font-size: 80pt;
+}
+.Parrafo{
+    color: brown;
+}
+div{
+    background-color: rgb(240, 212, 240);
+    width: 400px;
+    margin: 0 auto;
+}
+nav ul{
+    background-color: crimson;
+    display: flex;
+
+}
+nav ul li{
+    list-style: none;
+
+}
+nav ul li a{
+    color: black;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+nav ul li a:hover{
+    background-color: chartreuse;
+}
+nav a:hover{
+    background-color: aqua;
+}
+.Submenu{
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: burlywood;
+}
+.Mostrar-Submenu:hover .Submenu{
+    display: block;
+    text-align: center;
+}

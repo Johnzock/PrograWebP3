@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BochoColor</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .Opciones{
+            background-color: burlywood;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .Color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <div class="Opciones">
+            <div class="Color-opcion" style="background-color: red;" onclick="cambiarColorA('rojo')"></div>
+            <div class="Color-opcion" style="background-color: white;" onclick="cambiarColorA('blanco')"></div>
+            <div class="Color-opcion" style="background-color: blue;" onclick="cambiarColorA('azul')"></div>
+            <div class="Color-opcion" style="background-color: yellow;" onclick="cambiarColorA('amarillo')"></div>
+        </div>
+     </div>
+     <script>
+        //para llamar funciones es con 'comilla simple' por que si no, no funciona//
+        function cambiarColorA(Color){
+            document.getElementById("cambiar-bocho").src ="bocho_"+Color+".jpg"
+        }
+     </script>
+</body>
+</html>

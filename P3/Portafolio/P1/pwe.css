@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    background-color: rgb(211, 230, 255);
+}
+nav{
+    background-color: rgb(83, 122, 252);
+}
+article{
+    background-color: rgb(160, 152, 235);
+}
+aside{
+    background-color: rgb(171, 125, 214);
+}
+footer{
+    background-color: burlywood;
+}
+.contenedor{
+    display: flex;/*cambia elementos en linea */
+    flex-direction: column;
+    min-height: 100vh;
+}
+header, nav{
+    flex: 1;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+article{
+    flex: 4;
+}
+aside{
+    flex: 1;
+}
+h1, h2{
+    margin: 0;
+
+}
+footer{
+    display: flex;
+    flex-direction: row;
+}
+footer div{
+    flex: 1;
+}
+a {
+    color: rgb(4, 139, 65);
+}
+p {
+    font: 105% sans-serif;
+    color: rgb(255, 255, 255);
+}
+p1 {
+    color: rgb(54, 0, 248);
+}
+h2{
+    color: rgb(53, 59, 47);
+}
+h5{
+    font: 102% arial, ;
+    color: black;
+}
+h3{
+    font-size: 150%;
+    color: azure;
+}
+strong {
+    color: lightcoral;
+}

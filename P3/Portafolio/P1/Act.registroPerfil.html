@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro de perfil de Facebook</h1>
+    <form action="">
+        <h2>Ingrese su correo</h2>
+        <br>
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo">
+        <input type="submit" value="Enviar">
+        <h2>Ingrese su edad</h2>
+        <label for="edad">Edad</label>
+        <input type="number" min="1" max="35">
+        <h2>Ingrese su telefono</h2>
+        <label for="telefono">Telefono</label>
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Formato es 753-000-0000">
+        <h2>Ingrese una foto de perfil</h2>
+        <label for="foto">Sye tu foto</label>
+        <input type="file">
+        <h2>Quiere recordar su contrasena?</h2>
+        <label for="recordar">Recordar contrasena</label>
+        <input type="checkbox" value="si">
+        <h2>Agregue una brebe descripcion</h2>
+        <label for="texto">Descripcion</label>
+        <br>
+        <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>
