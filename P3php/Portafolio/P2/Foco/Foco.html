@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encender foco</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        #boton-foco{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="Foco" src="Foco_Apagado.jpg" alt="">
+        <div>
+            <button id="Boton_Foco" class="Encendido">Encendido</button>
+        </div>
+    </div>
+    <script>
+        const botonFoco = document.getElementById('Boton_Foco');
+        const imagenFoco = document.getElementById('Foco');
+        
+        function cambiarFoco(){
+            if(imagenFoco.src.endsWith('Foco_Apagado.jpg')){
+                imagenFoco.src = 'Foco_Encendido.jpg';
+                botonFoco.textContent = 'Apagar';
+                botonFoco.classList.remove('Encendido');
+                botonFoco.style.backgroundColor = 'yellow';
+            }else{
+                imagenFoco.src = 'Foco_Apagado.jpg';
+                botonFoco.textContent = 'Encender';
+                botonFoco.classList.add('Encendido');
+                botonFoco.style.backgroundColor = 'grey';
+            }
+            carta.rand
+        } 
+        botonFoco.addEventListener('click',cambiarFoco);
+    </script>
+</body>
+</html>

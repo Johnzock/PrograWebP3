@@ -1,0 +1,120 @@
+        //esto es un comentario de una linea
+        /*esto 
+        es 
+        un 
+        comentario
+        de 
+        multiples
+        lineas*/
+
+        /*variables
+        var Numero; //CamelCase *****
+        let NombreCompleto; //UpperCamelCase
+        const nombre_completo =1; //snake_case*/
+        //no se pueden usar dos palabras reservadas juntas ni caracteres especiales. 
+        
+        //tipos de datos
+        //let numero =123
+        /*let numero
+        numero =123
+        let cadenas = "Hola Mundo"
+        let boolean = true*/
+
+        /*Hola mundo
+        let nombre = "Johan"
+        console.log("Hola, " + nombre +" !Bienvenido a JAVASCRIPT¡")*/
+
+        //Esto es un comentario de una linea
+        //alert("¿Cual es tu nombre?")
+        //confirm("¿Cual es tu nombre?")
+
+//Operadores asignacion
+        /*
+        let nombre ="Johan"
+        nombre +=" Solano"
+        alert(nombre)*/
+        /*let nombre = ""
+        let numero = 4
+        numero +=2
+        alert(numero)
+        */
+
+//Operadores aritmeticos
+        /*
+        let suma = 2 + 2
+        let resta = 5 - 2
+        let multiplicacion = 2*2
+        let division = 10/2
+        let modulo = 7%2
+        let potencia = 2**2
+        alert(numero)
+        */
+
+//Operadores comparativos
+        /*
+        let numero2 = 18 > 20
+        numero2 = 15 < 20
+        numero2 = 18 >= 20
+        numero = 10 <= 20
+        numero = 19 == 20
+        numero2 = 19 != 19
+
+        let numero3 = 3
+        let numero4 = "3"
+        console.log(numero3===numero4)
+        */
+
+//Operadores Logicos
+        /*
+        let aprobar = edad >= 18 && edad <= 35 //operador and
+        let aprobar = edad >= 18 || edad <= 35 //operador or
+        let aprobar = !edad >= 18 //operador not
+        */
+
+        /*
+        if (10>5){
+            alert("Es mayor")
+        }else{
+            alert("Es menor")
+        }
+        */
+
+        /*
+        for(let i=0; i<5;i++){
+            console.log(i)
+        }
+        */
+
+        /*
+        let i=0
+        while(i<10){
+            console.log(i)
+        }
+        */
+
+//Funciones
+       /*
+       function saludar(){
+        alert("Hola Mundo")
+       }
+       */
+PHP
+<?php
+        #Comentarios.
+    //Esto es un comentario
+    #Esto es un comentario
+    /*Esto es un comentario
+    de lineas multiples*/
+
+        #Variables.
+    /*No podemos poner "1$" por que da error, unicamente podemos poner "$_" para declarar variables o solo "$"*/
+
+    $nombre = "Johan";
+    $apellido = "Solano";
+    /* echo "Hola " .$nombre." ".$apellido ." ,bienvenido a PHP";*/
+    echo "<h1>Hola Mundo!</h1>";
+    function saludar($nombre){
+        echo "<script> alert('Hola $nombre') </script>";
+    }
+    saludar('Johan');
+    ?> 

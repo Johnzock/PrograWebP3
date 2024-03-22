@@ -1,0 +1,36 @@
+* {
+    font-family:Helvetica;
+    margin: 0%;
+    color: black;
+}
+
+section.textbox
+{
+    padding: 5vh 20vw 2vh;
+}
+article.lista 
+{
+    margin: 10%
+}
+article.lista li 
+{
+    margin: 2vw;
+}
+article.Fyo img {
+    width: 45vh;
+    border-radius: 50%;
+}
+article.hbox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+article.hbox div
+{
+    width: 40%;
+    padding: 1vh;
+    border: solid 5px green;
+    text-align: center;
+    margin: 1vh;
+}

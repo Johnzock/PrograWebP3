@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BochoColor</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .Opciones{
+            background-color: burlywood;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .Color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <div class="Opciones">
+            <label><input type="radio" name="color" value="rojo" onclick="cambiarColorA('rojo')">Rojo</label>
+            <label><input type="radio" name="color" value="blanco" onclick="cambiarColorA('blanco')">Blanco</label>
+            <label><input type="radio" name="color" value="azul" onclick="cambiarColorA('azul')">Azul</label>
+            <label><input type="radio" name="color" value="amarillo" onclick="cambiarColorA('amarillo')">Amarillo</label>
+        </div>
+        <div class="Opciones">
+            <select onchange="cambiarColorB(this.value)">
+                <option value="rojo">Rojo</option>
+                <option value="blanco">Blanco</option>
+                <option value="azul">Azul</option>
+                <option value="amarillo">Amarillo</option>
+            </select>
+        </div>
+     </div>
+     <script>
+        function cambiarColorA(Color){
+            document.getElementById("cambiar-bocho").src ="bocho_"+Color+".jpg";
+        }
+        
+        function cambiarColorB(Color){
+            document.getElementById("cambiar-bocho").src ="bocho_"+Color+".jpg";
+        }
+     </script>
+</body>
+</html>

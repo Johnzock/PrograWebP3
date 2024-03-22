@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BochoTrabajo</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .Opciones{
+            background-color: burlywood;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .Color-opcion{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <div class="Opciones">
+            <select id="colorSelect" onchange="cambiarColorA(this.value)">
+            </select>
+        </div>
+     </div>
+     <script>
+        const colores =['rojo','blanco','azul','amarillo']
+        let select = document.getElementById('colorSelect')
+        colores.forEach(function(Color) {
+            let opcion = document.createElement('Option')
+            opcion.text = Color.toUpperCase()
+            opcion.value = Color
+            select.add(opcion)
+        });
+        function cambiarColorA(Color){
+            document.getElementById("cambiar-bocho").src ="bocho_"+Color+".jpg";
+        }
+     </script>
+</body>
+</html>
