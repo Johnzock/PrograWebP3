@@ -1,5 +1,5 @@
 <?php
-$carpeta = "archivos/";
+$carpeta = "imagenes/";
 
 if(!empty($_FILES["archivo"]["name"])){
     $archivo = $_FILES["archivo"]["name"];
