@@ -2,7 +2,7 @@
 $servidor = "localhost";
 $usuariodb = "root";
 $passdb = "";
-$db = "tabla_galeria";
+$db = "galeria";
 $conexion = mysqli_connect($servidor,$usuariodb,$passdb,$db);
 if($conexion->connect_error){
   die("Error en la conexión: " . $conexion->connect_error);
