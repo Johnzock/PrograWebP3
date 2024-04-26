@@ -46,6 +46,9 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .gallery .image-container {
+            position: relative;
+        }
         .gallery img {
             width: 100%;
             height: auto;
@@ -55,6 +58,25 @@
         }
         .gallery img:hover {
             transform: scale(1.05);
+        }
+        .image-info {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .image-info p {
+            margin: 0;
+        }
+
+        .image-info.show {
+            display: block;
         }
     </style>
 </head>
@@ -73,40 +95,41 @@
     </header>
 
     <div class="gallery">
-    <?php
-$ruta_imagenes = "imagenes/";
-$imagenes = opendir($ruta_imagenes);
-$hay_imagenes = false;
-if ($imagenes) {
-    while ($imagen = readdir($imagenes)) {
-        if (is_file($ruta_imagenes . $imagen) && getimagesize($ruta_imagenes . $imagen)) {
-            $nombre_archivo = pathinfo($imagen, PATHINFO_FILENAME);
-            $datos_archivo = "datos_" . $nombre_archivo . ".txt";
-            
-            if (file_exists($datos_archivo)) {
-                $datos = file_get_contents($datos_archivo);
-                echo "<div>";
-                echo "<img src='$ruta_imagenes$imagen'>";
-                echo "<p>$datos</p>";
-                echo "</div>";
-            } else {
-                echo "<div>";
-                echo "<img src='$ruta_imagenes$imagen'>";
-                echo "<p>No hay datos disponibles para esta imagen</p>";
-                echo "</div>";
+        <?php
+        $ruta_imagenes = "imagenes/";
+        $imagenes = opendir($ruta_imagenes);
+        $hay_imagenes = false;
+        if ($imagenes) {
+            while ($imagen = readdir($imagenes)) {
+                if (is_file($ruta_imagenes . $imagen) && getimagesize($ruta_imagenes . $imagen)) {
+                    $tipo_archivo = pathinfo($ruta_imagenes . $imagen, PATHINFO_EXTENSION);
+                    echo "<div class='image-container'>";
+                    echo "<img src='$ruta_imagenes$imagen'>";
+                    echo "<div class='image-info'>";
+                    echo "<p>Nombre: $imagen</p>";
+                    echo "<p>Tipo de archivo: $tipo_archivo</p>";
+                    echo "</div>";
+                    echo "</div>";
+                    $hay_imagenes = true;
+                }
             }
-
-            $hay_imagenes = true;
+            closedir($imagenes);
+        } else {
+            echo "Error: al cargar carpeta de imagenes";
         }
-    }
-    closedir($imagenes);
-} else {
-    echo "Error: al cargar carpeta de imagenes";
-}
-if (!$hay_imagenes) {
-    echo "No hay imagenes aun. Sube la primera.";
-}
-?>
-</div>
+        if (!$hay_imagenes) {
+            echo "No hay imagenes aun. Sube la primera";
+        }
+        ?>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.image-container');
+        images.forEach(function(image) {
+            image.addEventListener('click', function() {
+                this.querySelector('.image-info').classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
