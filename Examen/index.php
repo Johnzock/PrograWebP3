@@ -73,25 +73,40 @@
     </header>
 
     <div class="gallery">
-        <?php
-        $ruta_imagenes = "imagenes/";
-        $imagenes = opendir($ruta_imagenes);
-        $hay_imagenes = false;
-        if ($imagenes) {
-            while ($imagen = readdir($imagenes)) {
-                if (is_file($ruta_imagenes . $imagen) && getimagesize($ruta_imagenes . $imagen)) {
-                    echo "<img src='$ruta_imagenes$imagen'>";
-                    $hay_imagenes = true;
-                }
+    <?php
+$ruta_imagenes = "imagenes/";
+$imagenes = opendir($ruta_imagenes);
+$hay_imagenes = false;
+if ($imagenes) {
+    while ($imagen = readdir($imagenes)) {
+        if (is_file($ruta_imagenes . $imagen) && getimagesize($ruta_imagenes . $imagen)) {
+            $nombre_archivo = pathinfo($imagen, PATHINFO_FILENAME);
+            $datos_archivo = "datos_" . $nombre_archivo . ".txt";
+            
+            if (file_exists($datos_archivo)) {
+                $datos = file_get_contents($datos_archivo);
+                echo "<div>";
+                echo "<img src='$ruta_imagenes$imagen'>";
+                echo "<p>$datos</p>";
+                echo "</div>";
+            } else {
+                echo "<div>";
+                echo "<img src='$ruta_imagenes$imagen'>";
+                echo "<p>No hay datos disponibles para esta imagen</p>";
+                echo "</div>";
             }
-            closedir($imagenes);
-        } else {
-            echo "Error: al cargar carpeta de imagenes";
+
+            $hay_imagenes = true;
         }
-        if (!$hay_imagenes) {
-            echo "No hay imagenes aun. sube la primera";
-        }
-        ?>
-    </div>
+    }
+    closedir($imagenes);
+} else {
+    echo "Error: al cargar carpeta de imagenes";
+}
+if (!$hay_imagenes) {
+    echo "No hay imagenes aun. Sube la primera.";
+}
+?>
+</div>
 </body>
 </html>
